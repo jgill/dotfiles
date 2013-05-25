@@ -1,0 +1,9 @@
+[user]
+	name = John Gill
+	email = john.p.gill@gmail.com
+[color]
+  ui = true
+[core]
+  excludesfile = /users/johngill/.gitignore
+[http]
+  sslverify = false
