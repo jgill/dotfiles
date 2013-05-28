@@ -1,1 +1,2 @@
+let g:ctrlp_map = '<c-t>'
 let &t_Co=256

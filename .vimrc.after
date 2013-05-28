@@ -1,2 +1,7 @@
+set clipboard=unnamed
+set wildignore+=*/vendor/bundle/*
+set mouse=a
+set ttym=xterm2
+
 set background=dark
 :color grb256
