@@ -5,3 +5,5 @@ set ttym=xterm2
 
 set background=dark
 :color grb256
+
+nmap =j :%!python -m json.tool<CR>

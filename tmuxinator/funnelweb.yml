@@ -1,0 +1,15 @@
+name: funnelweb
+root: projects/myhealthandmoney/marketing/funnelweb
+
+pre: gitx; ctags --exclude=vendor -R .
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+windows:
+  - editor: vim .
+  - database: mysql -u root orbweaver_development
+  - console: bundle exec rails c
+  - server: bundle exec rails s -p 3010
+  - utility: clear
+  - logs: tail -f log/development.log

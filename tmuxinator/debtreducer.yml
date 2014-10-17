@@ -1,0 +1,9 @@
+name: debtreducer
+root: projects/research/erlang/debtreducer
+
+pre: gitx; ctags --exclude=dist -R .
+
+windows:
+  - editor: vim .
+  - console: clear; erl -pa ebin/.
+  - utility: clear

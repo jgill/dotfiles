@@ -1,0 +1,13 @@
+name: yosog
+root: projects/research/haskell/yosog
+
+pre: gitx; ctags --exclude=dist -R .
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+windows:
+  - editor: vim .
+  - database: clear
+  - server: yesod devel
+  - utility: clear

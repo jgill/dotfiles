@@ -1,0 +1,9 @@
+name: LearnYouSE
+root: projects/personal/research/erlang/LearnYouSE
+
+pre: gitx; ctags --exclude=dist -R .
+
+windows:
+  - editor: clear; vim .
+  - console: clear; erl
+  - utility: clear
