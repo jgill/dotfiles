@@ -1,0 +1,15 @@
+name: hcs
+root: projects/myhealthandmoney/hcs
+
+pre: gitx; ctags --exclude=vendor -R .
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+windows:
+  - editor: vim .
+  - database: mysql -u root hcs_development
+  - console: bundle exec rails c
+  - server: bundle exec unicorn -p 3030
+  - utility: clear
+  - logs: tail -f log/development.log
