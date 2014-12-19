@@ -1,5 +1,5 @@
-name: policies
-root: projects/myhealthandmoey/policies
+name: policies_www
+root: projects/myhealthandmoney/policies_www
 
 pre: gitx; ctags --exclude=vendor -R .
 
@@ -8,4 +8,7 @@ pre: gitx; ctags --exclude=vendor -R .
 
 windows:
   - editor: vim .
+  - sass: bundle exec sass --watch sass/main.scss
+  - build: bundle exec jekyll build --watch
+  - server: bundle exec jekyll serve
   - utility: clear
