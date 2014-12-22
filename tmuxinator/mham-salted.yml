@@ -1,5 +1,5 @@
 name: mham-salted
-root: projects/myhealthandmoney/devops/mham-salted
+root: projects/myhealthandmoney/devops/mham_salted
 
 pre: gitx; ctags --exclude=vendor -R .
 
