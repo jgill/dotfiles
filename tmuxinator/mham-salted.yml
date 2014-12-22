@@ -1,0 +1,9 @@
+name: mham-salted
+root: projects/myhealthandmoney/devops/mham-salted
+
+pre: gitx; ctags --exclude=vendor -R .
+
+windows:
+  - editor: vim .
+  - ruby: irb
+  - utility: clear
