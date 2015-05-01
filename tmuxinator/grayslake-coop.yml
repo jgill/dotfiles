@@ -1,0 +1,14 @@
+name: grayslake-coop
+root: projects/volunteering/gcns/grayslake-coop.github.io
+
+pre: gitx; ctags --exclude=vendor -R .
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+windows:
+  - editor: vim .
+  - sass: bundle exec sass --watch sass/main.scss
+  - build: bundle exec jekyll build --watch
+  - server: bundle exec jekyll serve
+  - utility: clear

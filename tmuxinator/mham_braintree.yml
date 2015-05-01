@@ -1,0 +1,12 @@
+# ~/.tmuxinator/mham_ec2.yml
+
+name: mham_braintree
+root: projects/myhealthandmoney/gems/mham_braintree
+
+pre: gitx; ctags --exclude=vendor -R .
+
+windows:
+  - editor: vim .
+  - console: bundle exec irb
+  - utility: clear
+
