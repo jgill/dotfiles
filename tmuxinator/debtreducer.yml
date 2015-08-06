@@ -1,9 +1,10 @@
 name: debtreducer
-root: projects/research/erlang/debtreducer
+root: projects/personal/debtreducer
 
 pre: gitx; ctags --exclude=dist -R .
 
 windows:
   - editor: vim .
-  - console: clear; erl -pa ebin/.
+  - console: bundle exec rails c
+  - server: bundle exec rails s -p 3030
   - utility: clear
