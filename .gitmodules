@@ -1,0 +1,3 @@
+[submodule "janus/elm.vim"]
+	path = janus/elm.vim
+	url = git@github.com:lambdatoast/elm.vim.git

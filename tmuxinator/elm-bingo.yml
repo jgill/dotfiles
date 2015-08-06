@@ -1,0 +1,14 @@
+name: bingo
+root: projects/research/elm/bingo
+
+pre: gitx; ctags --exclude=dist -R .
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+windows:
+  - editor: vim .
+  - repl: elm repl
+  - reactor: elm reactor
+  - utility: clear
+
