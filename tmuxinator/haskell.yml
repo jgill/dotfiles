@@ -8,6 +8,6 @@ pre: gitx; ctags --exclude=dist -R .
 
 windows:
   - editor: vim .
-  - database: clear
+  - repl: clear && ghci
   - utility: clear
 
