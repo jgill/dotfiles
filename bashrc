@@ -22,7 +22,8 @@ alias ll='ls -al'
 export EDITOR="vim"
 PS1="[\u@$(scutil --get ComputerName) \W]\\$ "
 
-export PATH="/usr/local/bin:/usr/local/sbin:/Users/johngill/.rbenv/bin:$PATH"
+export GOPATH=$HOME/.golang/packages
+export PATH="/usr/local/bin:/usr/local/sbin:/Users/johngill/.rbenv/bin:/Users/johngill/.cabal/bin:$PATH:$GOROOT/bin"
 
 source /usr/local/bin/tmuxinator.bash
 

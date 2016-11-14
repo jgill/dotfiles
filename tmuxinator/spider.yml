@@ -11,7 +11,7 @@ pre: gitx; ctags --exclude=vendor -R .
 windows:
   - editor: vim .
   - database: mysql -u root spider_development
-  - console: bundle exec rails c
-  - server: bundle exec rails s -p 3030
+  - console: bin/rails c
+  - server: bin/rails s -p 3030
   - utility: clear
   - logs: tail -f log/development.log

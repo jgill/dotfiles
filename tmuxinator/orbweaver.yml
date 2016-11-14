@@ -9,7 +9,7 @@ pre: gitx; ctags --exclude=vendor -R .
 windows:
   - editor: vim .
   - database: mysql -u root orbweaver_development
-  - console: bundle exec rails c
-  - server: bundle exec rails s -p 3000
+  - console: bin/rails c
+  - server: bin/rails s -p 3000
   - utility: clear
   - logs: tail -f log/development.log

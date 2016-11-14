@@ -1,5 +1,5 @@
-name: exercism-ruby
-root: projects/exercism/ruby
+name: exercism
+root: projects/exercism/elixir
 
 pre: ctags --exclude=vendor -R .
 
@@ -8,5 +8,5 @@ pre: ctags --exclude=vendor -R .
 
 windows:
   - editor: vim .
-  - console: irb
+  - console: iex
   - utility: clear

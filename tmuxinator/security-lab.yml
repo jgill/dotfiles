@@ -1,5 +1,5 @@
 name: security-lab
-root: projects/myhealthandmoney/devops/security-lab
+root: projects/myhealthandmoney/research/security-lab
 
 pre: gitx; ctags --exclude=vendor -R .
 

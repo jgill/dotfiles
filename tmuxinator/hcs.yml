@@ -9,7 +9,7 @@ pre: gitx; ctags --exclude=vendor -R .
 windows:
   - editor: vim .
   - database: mysql -u root hcs_development
-  - console: bundle exec rails c
+  - console: bin/rails c
   - server: bundle exec unicorn -p 8060
   - utility: clear
   - logs: tail -f log/development.log
