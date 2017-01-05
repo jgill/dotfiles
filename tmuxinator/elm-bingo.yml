@@ -1,7 +1,7 @@
 name: bingo
-root: projects/research/elm/bingo
+root: /Users/johngill/projects/research/elm/pragstudio-elm-code/starter-project/bingo
 
-pre: gitx; ctags --exclude=dist -R .
+pre: gitx; ctags --exclude=elm-stuff -R .
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -9,6 +9,6 @@ pre: gitx; ctags --exclude=dist -R .
 windows:
   - editor: vim .
   - repl: elm repl
-  - reactor: elm reactor
+  - reactor: elm-live Bingo.elm --open --output=bingo.js
   - utility: clear
 
