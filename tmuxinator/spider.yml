@@ -14,4 +14,3 @@ windows:
   - console: bin/rails c
   - server: bin/rails s -p 3030
   - utility: clear
-  - logs: tail -f log/development.log
