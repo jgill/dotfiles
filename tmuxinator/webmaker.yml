@@ -1,5 +1,7 @@
-name: policies_www
-root: projects/myhealthandmoney/policies_www
+# ~/.tmuxinator/webmaker.yml
+
+name: webmaker
+root: projects/myhealthandmoney/aptible/webmaker
 
 pre: gitx; ctags --exclude=vendor -R .
 
@@ -8,5 +10,4 @@ pre: gitx; ctags --exclude=vendor -R .
 
 windows:
   - editor: vim .
-  - server: bundle exec jekyll serve
   - utility: clear

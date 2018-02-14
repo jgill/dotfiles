@@ -1,12 +1,12 @@
-name: policies_www
-root: projects/myhealthandmoney/policies_www
+name: Exp-data
+root: projects/coursework/data_science/exp-data-analysis/week_3
 
-pre: gitx; ctags --exclude=vendor -R .
+pre: gitx; ctags --exclude=dist -R .
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
 
 windows:
   - editor: vim .
-  - server: bundle exec jekyll serve
-  - utility: clear
+  - repl: r
+  - bash: clear

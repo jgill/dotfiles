@@ -17,6 +17,7 @@ alias grr='git remote rm'
 alias gpu='git pull'
 alias gcl='git clone'
 
+alias kraken="open -na 'GitKraken' --args -p $(pwd)"
 alias ll='ls -al'
 
 export EDITOR="vim"
