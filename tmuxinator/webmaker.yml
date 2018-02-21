@@ -10,4 +10,5 @@ pre: gitx; ctags --exclude=vendor -R .
 
 windows:
   - editor: vim .
+  - repl: irb
   - utility: clear
