@@ -1,7 +1,7 @@
 # ~/.tmuxinator/spider.yml
 
 name: spider
-root: projects/myhealthandmoney/spider
+root: projects/myhealthandmoney/infrastructure_3.0/aptible/spider
 
 pre: gitx; ctags --exclude=vendor -R .
 

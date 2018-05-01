@@ -1,5 +1,5 @@
 name: mham_vpc
-root: projects/myhealthandmoney/devops/mham_vpc
+root: projects/myhealthandmoney/archive/devops/mham_vpc
 
 pre: gitx; ctags --exclude=vendor -R .
 
