@@ -1,9 +1,0 @@
-name: hsatool
-root: projects/myhealthandmoney/data/hsatool
-
-pre: gitx; ctags --exclude=vendor -R .
-
-windows:
-  - editor: vim .
-  - console: irb
-  - utility: clear
