@@ -23,9 +23,22 @@ alias ll='ls -al'
 export EDITOR="vim"
 PS1="[\u@$(scutil --get ComputerName) \W]\\$ "
 
-export GOPATH=$HOME/.golang/packages
-export PATH="/usr/local/bin:/usr/local/sbin:/Users/johngill/.rbenv/bin:/Users/johngill/.cabal/bin:$PATH:$GOROOT/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/Users/johngill/.cabal/bin:/opt/nginx/sbin:$PATH"
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 source /usr/local/bin/tmuxinator.bash
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export DATABASE_USER=johngill
+export REPORTING_DATABASE_USER=johngill
+export PAGER="less -S"
+
+# https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+#http://ollehost.dk/blog/2013/06/25/install-ruby-2-0-0-p195-using-ruby-build-and-pkg-config/
+export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig:/usr/local/lib/pkgconfig
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
