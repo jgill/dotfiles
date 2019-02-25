@@ -11,12 +11,12 @@ alias kid='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/b
 alias kis='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-integration-sanjose/kube-config-sjc03-benchprep-integration-sanjose.yml'
 alias ksd='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-staging-dallas/kube-config-dal10-benchprep-staging-dallas.yml'
 alias kss='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-staging-sanjose/kube-config-sjc03-benchprep-staging-sanjose.yml'
-alias pods='/usr/local/bin/kubetcl get pods'
-alias secrets='/usr/local/bin/kubetcl get secrets'
-alias k=/usr/local/bin/kubetcl
-alias kd=/usr/local/bin/kubetcl describe
-alias kg=/usr/local/bin/kubetcl get
-alias ksys=/usr/local/bin/kubetcl --namespace=kube-system
+alias pods='/usr/local/bin/kubectl get pods'
+alias secrets='/usr/local/bin/kubectl get secrets'
+alias k=/usr/local/bin/kubectl
+alias kd='/usr/local/bin/kubectl describe'
+alias kg='/usr/local/bin/kubectl get'
+alias ksys=/usr/local/bin/kubectl --namespace=kube-system
 
 export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-integration-dallas/kube-config-dal10-benchprep-integration-dallas.yml
 
