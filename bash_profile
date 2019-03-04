@@ -11,6 +11,8 @@ alias kid='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/b
 alias kis='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-integration-sanjose/kube-config-sjc03-benchprep-integration-sanjose.yml'
 alias ksd='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-staging-dallas/kube-config-dal10-benchprep-staging-dallas.yml'
 alias kss='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-staging-sanjose/kube-config-sjc03-benchprep-staging-sanjose.yml'
+alias kpd='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-production-dallas/kube-config-dal10-benchprep-production-dallas.yml'
+alias kps='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-production-sanjose/kube-config-sjc03-benchprep-production-sanjose.yml'
 alias pods='/usr/local/bin/kubectl get pods'
 alias secrets='/usr/local/bin/kubectl get secrets'
 alias k=/usr/local/bin/kubectl
