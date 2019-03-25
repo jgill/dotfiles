@@ -21,7 +21,6 @@ alias kraken="open -na 'GitKraken' --args -p $(pwd)"
 alias ll='ls -al'
 
 export EDITOR="vim"
-PS1="[\u@$(scutil --get ComputerName) \W]\\$ "
 
 export PATH="/usr/local/bin:/usr/local/sbin:/Users/johngill/.cabal/bin:/opt/nginx/sbin:$PATH"
 
@@ -42,3 +41,4 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig:/usr/local/lib/pkgco
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$HOME/.cargo/bin:$PATH"

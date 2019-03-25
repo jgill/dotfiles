@@ -11,3 +11,12 @@ nmap =j :%!python -m json.tool<CR>
 nnoremap <leader>el :ElmEvalLine<CR>
 vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
 nnoremap <leader>em :ElmMakeCurrentFile<CR>
+
+" powerline installed with
+"   pip3 install powerline-status
+" Find {repository_root} with
+"   pip3 show powerline-status
+set rtp+=/usr/local/lib/python3.7/site-packages
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup

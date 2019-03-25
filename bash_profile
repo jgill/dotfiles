@@ -22,6 +22,9 @@ alias ksys=/usr/local/bin/kubectl --namespace=kube-system
 
 export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-integration-dallas/kube-config-dal10-benchprep-integration-dallas.yml
 
+## Passenger
+alias ttr='passenger-config restart-app .'
+
 ## `ksh benchprep-v2` open shell in application
 function ksh() {
   pod=$(kubectl get pods | rg $1 | rg Running | head -n1 | cut -d' ' -f1)
@@ -31,3 +34,11 @@ function ksh() {
 }
 
 export PROJECT_DIR="$HOME/projects/benchprep"
+alias pd='cd $PROJECT_DIR'
+
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+source /usr/local/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
+
+export PATH="$HOME/.cargo/bin:$PATH"
