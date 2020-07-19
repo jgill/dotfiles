@@ -1,16 +1,29 @@
 set clipboard=unnamed
 set wildignore+=*/vendor/bundle/*
+set wildignore+=*/node_modules/*
 set mouse=a
 set ttym=xterm2
 
-set background=dark
-:color grb256
+syntax enable
+set background=light
+let g:solarized_termcolors=256
+colorscheme solarized
+":color grb256
 
 nmap =j :%!python -m json.tool<CR>
 
 nnoremap <leader>el :ElmEvalLine<CR>
 vnoremap <leader>es :<C-u>ElmEvalSelection<CR>
 nnoremap <leader>em :ElmMakeCurrentFile<CR>
+
+" Adds toggle ALE keymap
+nnoremap <leader>at :ALEToggle<CR>
+
+"turn off arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " powerline installed with
 "   pip3 install powerline-status

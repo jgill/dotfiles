@@ -1,44 +1,6 @@
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-## Kubernetes
-alias kid='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-integration-dallas/kube-config-dal10-benchprep-integration-dallas.yml'
-alias kis='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-integration-sanjose/kube-config-sjc03-benchprep-integration-sanjose.yml'
-alias ksd='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-staging-dallas/kube-config-dal10-benchprep-staging-dallas.yml'
-alias kss='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-staging-sanjose/kube-config-sjc03-benchprep-staging-sanjose.yml'
-alias kpd='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-production-dallas/kube-config-dal10-benchprep-production-dallas.yml'
-alias kps='export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-production-sanjose/kube-config-sjc03-benchprep-production-sanjose.yml'
-alias pods='/usr/local/bin/kubectl get pods'
-alias secrets='/usr/local/bin/kubectl get secrets'
-alias k=/usr/local/bin/kubectl
-alias kd='/usr/local/bin/kubectl describe'
-alias kg='/usr/local/bin/kubectl get'
-alias ksys=/usr/local/bin/kubectl --namespace=kube-system
-
-export KUBECONFIG=$HOME/.bluemix/plugins/container-service/clusters/benchprep-integration-dallas/kube-config-dal10-benchprep-integration-dallas.yml
-
-## Passenger
-alias ttr='passenger-config restart-app .'
-
-## `ksh benchprep-v2` open shell in application
-function ksh() {
-  pod=$(kubectl get pods | rg $1 | rg Running | head -n1 | cut -d' ' -f1)
-  cmd=${2:-bash}
-  echo "Executing [$cmd] in: [$pod]"
-  kubectl exec $pod -it $cmd
-}
-
-export PROJECT_DIR="$HOME/projects/benchprep"
-alias pd='cd $PROJECT_DIR'
-
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-source /usr/local/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
-
-export PATH="$HOME/.cargo/bin:$PATH"
+if [ -f ~/.profile ]; then
+  source ~/.profile
+fi
