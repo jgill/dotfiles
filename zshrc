@@ -20,6 +20,7 @@ alias gra='git remote add'
 alias grr='git remote rm'
 alias gpu='git pull'
 alias gcl='git clone'
+alias gfp='git fetch --all --prune'
 
 alias ll='exa --long --all --git --header'
 alias ct='ctags --exclude=node_modules --exclude=vendor -R'
@@ -49,13 +50,43 @@ unset cache_file init_args
 # source powerlevel10k theme
 source $HOME/personal/powerlevel10k/powerlevel10k.zsh-theme
 
-
 export PROJECT_DIR="$HOME/projects"
 alias pd='cd $PROJECT_DIR'
 
 export DATABASE_USER=$USER
 export REPORTING_DATABASE_USER=johngill
 export PAGER="less -S"
+
+## Kubernetes section
+alias pods='/usr/local/bin/kubectl get pods'
+alias secrets='/usr/local/bin/kubectl get secrets'
+alias k=/usr/local/bin/kubectl
+alias kd='/usr/local/bin/kubectl describe'
+alias kg='/usr/local/bin/kubectl get'
+alias ksys=/usr/local/bin/kubectl --namespace=kube-system
+
+### `ksh benchprep-v2` open shell in application
+function ksh() {
+  pod=$(kubectl get pods | rg $1 | rg Running | head -n1 | cut -d' ' -f1)
+  cmd=${2:-bash}
+  echo "Executing [$cmd] in: [$pod]"
+  kubectl exec $pod -it $cmd
+}
+
+function albps() {
+    pods="$(kubectl get pods | grep nginx-ingress | cut -d' ' -f1)"
+    for pod in $pods; do
+        echo $pod
+        procs="$(kubectl exec -it -c nginx-ingress $pod -- ps afx | grep nginx)"
+        printf '  shutting down: '
+        echo "$procs" | grep 'shutting down' | wc -l
+        printf '        defunct: '
+        echo "$procs" | grep defunct | wc -l
+    done
+}
+## End of kubernetes section
+
+
 
 eval "$(rbenv init -)"
 
