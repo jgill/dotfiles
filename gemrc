@@ -3,6 +3,7 @@
 :bulk_threshold: 1000
 :sources:
 - https://rubygems.org/
+- https://jgill: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@rubygems.pkg.github.com/watermelonexpress/
 :update_sources: true
 :verbose: true
 :concurrent_downloads: 8
